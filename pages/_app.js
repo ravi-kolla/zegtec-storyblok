@@ -16,6 +16,7 @@ import AllArticles from '../layouts/components/AllArticles';
 import Article from '../layouts/components/Article';
 import Video from '../layouts/components/Video';
 import Header from '../layouts/partials/Header';
+import Footer from '../layouts/partials/Footer';
 import PopularArticles from '../layouts/components/PopularArticles';
 
 const components = {
@@ -28,6 +29,7 @@ const components = {
   servicesCarousel: ServicesCarousel,
   video: Video,
   header: Header,
+  footer: Footer,
 };
 storyblokInit({
   accessToken: process.env.NEXT_PUBLIC_STORYBLOK_ACESSTOKEN,

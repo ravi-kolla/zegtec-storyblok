@@ -15,11 +15,7 @@ const Header = ({blok}) => {
 
   // states declaration
   const [navOpen, setNavOpen] = useState(false);
-
-  // logo source
-  const { logo } = config.site;
-  const { enable, label, link } = config.nav_button;
-  console.log(blok);
+  
   return (
     <header className="header" {...storyblokEditable(blok)}>
       <nav className="navbar container">

@@ -91,7 +91,6 @@ const Base = ({
       </Head>
       {/* main site */}
       <main>{children}</main>
-      <Footer />
     </>
   );
 };
