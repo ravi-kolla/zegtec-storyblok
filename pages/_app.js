@@ -18,6 +18,7 @@ import Video from '../layouts/components/Video';
 import Header from '../layouts/partials/Header';
 import Footer from '../layouts/partials/Footer';
 import PopularArticles from '../layouts/components/PopularArticles';
+import StackedCard from '../layouts/components/StackedCard';
 
 const components = {
   feature: Feature,
@@ -30,7 +31,9 @@ const components = {
   video: Video,
   header: Header,
   footer: Footer,
+  stackedCard: StackedCard,
 };
+
 storyblokInit({
   accessToken: process.env.NEXT_PUBLIC_STORYBLOK_ACESSTOKEN,
   use: [apiPlugin],
