@@ -22,6 +22,7 @@ import StackedCard from '../layouts/components/StackedCard';
 import UserProfile from '../layouts/components/UserProfile';
 import UserImageProfile from '../layouts/components/UserImageProfile';
 import TextBlock from '../layouts/components/TextBlock';
+import Clients from '../layouts/components/Clients';
 
 const components = {
   feature: Feature,
@@ -38,6 +39,7 @@ const components = {
   userProfile: UserProfile,
   textBlock: TextBlock,
   userImageProfile: UserImageProfile,
+  clients: Clients,
 };
 
 storyblokInit({
