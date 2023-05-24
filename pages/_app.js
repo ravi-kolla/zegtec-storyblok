@@ -19,6 +19,9 @@ import Header from '../layouts/partials/Header';
 import Footer from '../layouts/partials/Footer';
 import PopularArticles from '../layouts/components/PopularArticles';
 import StackedCard from '../layouts/components/StackedCard';
+import UserProfile from '../layouts/components/UserProfile';
+import UserImageProfile from '../layouts/components/UserImageProfile';
+import TextBlock from '../layouts/components/TextBlock';
 
 const components = {
   feature: Feature,
@@ -32,6 +35,9 @@ const components = {
   header: Header,
   footer: Footer,
   stackedCard: StackedCard,
+  userProfile: UserProfile,
+  textBlock: TextBlock,
+  userImageProfile: UserImageProfile,
 };
 
 storyblokInit({

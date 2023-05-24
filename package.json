@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@sendgrid/mail": "^7.7.0",
+    "@storyblok/js": "^2.1.6",
     "@storyblok/react": "^2.1.0",
     "github-slugger": "^2.0.0",
     "gray-matter": "^4.0.3",

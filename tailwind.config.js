@@ -52,6 +52,9 @@ module.exports = {
         border: theme.colors.default.theme_color.border,
         "theme-light": theme.colors.default.theme_color.theme_light,
       },
+      aspectRatio: {
+        '3/2': '3 / 2',
+      },
       fontSize: {
         base: font_base + "px",
         h1: h1 + "rem",
