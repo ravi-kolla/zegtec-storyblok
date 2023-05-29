@@ -22,6 +22,8 @@ import UserImageProfile from '../layouts/components/UserImageProfile';
 import TextBlock from '../layouts/components/TextBlock';
 import Clients from '../layouts/components/Clients';
 import Image from '../layouts/components/Image';
+import Jobs from '../layouts/components/Jobs';
+import JobPost from '../layouts/components/JobPost';
 
 const components = {
   feature: Feature,
@@ -38,6 +40,8 @@ const components = {
   userImageProfile: UserImageProfile,
   clients: Clients,
   image: Image,
+  jobs:Jobs,
+  jobPost:JobPost,
 };
 
 storyblokInit({
