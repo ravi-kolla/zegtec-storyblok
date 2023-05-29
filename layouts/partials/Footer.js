@@ -1,75 +1,52 @@
 import Social from "@components/Social";
-import Logo from "@components/Logo";
 import config from "@config/config.json";
 import menu from "@config/menu.json";
 import social from "@config/social.json";
 import { markdownify } from "@lib/utils/textConverter";
 import Image from "next/image";
 import Link from "next/link";
-import { storyblokEditable } from "@storyblok/react";
 
-const Footer = ({blok}) => {
+const Footer = () => {
+  const { copyright, footer_content } = config.params;
   const { footer } = menu;
-  console.log(blok);
   return (
-    <footer className="section bg-theme-light pb-0"  {...storyblokEditable(blok)}>
+    <footer className="section bg-theme-light pb-0">
       <div className="container">
         {/* footer menu */}
         <div className="row">
-          {blok?.sectionOne &&
-            <div className="mb-12 sm:col-6 lg:col-3">
-                <h4>{blok?.sectionOne}</h4>
+          {footer.map((col) => {
+            return (
+              <div className="mb-12 sm:col-6 lg:col-3" key={col.name}>
+                {markdownify(col.name, "h2", "h4")}
                 <ul className="mt-6">
-                  {blok?.linksOne.map((item) => (
-                    <li className="mb-1" key={item.link.title}>
-                      <Link href={item.link.url} rel="">
-                        {item.link.title}
+                  {col?.menu.map((item) => (
+                    <li className="mb-1" key={item.text}>
+                      <Link href={item.url} rel="">
+                        {item.text}
                       </Link>
                     </li>
                   ))}
                 </ul>
               </div>
-          }
-          {blok?.sectionTwo &&
-            <div className="mb-12 sm:col-6 lg:col-3">
-                <h4>{blok?.sectionTwo}</h4>
-                <ul className="mt-6">
-                  {blok?.linksTwo.map((item) => (
-                    <li className="mb-1" key={item.link.title}>
-                    <Link href={item.link.url} rel="">
-                      {item.link.title}
-                    </Link>
-                  </li>
-                  ))}
-                </ul>
-              </div>
-          }
-          {blok?.sectionThree &&
-            <div className="mb-12 sm:col-6 lg:col-3">
-                <h4>{blok?.sectionThree}</h4>
-                <ul className="mt-6">
-                  {blok?.linksThree.map((item) => (
-                    <li className="mb-1" key={item.link.title}>
-                    <Link href={item.link.url} rel="">
-                      {item.link.title}
-                    </Link>
-                  </li>
-                  ))}
-                </ul>
-              </div>
-          }
+            );
+          })}
+          {/* social icons */}
           <div className="md-12 sm:col-6 lg:col-3">
-            <Link href="/" aria-label="Zegtec">
-              <img src={blok?.logo?.filename} />
+            <Link href="/" aria-label="Bigspring">
+              <Image
+                src={config.site.logo}
+                width={config.site.logo_width}
+                height={config.site.logo_height}
+                alt=""
+              />
             </Link>
-            <p classname="mt-3 mb-6">{blok?.address}</p>
+            {markdownify(footer_content, "p", "mt-3 mb-6")}
             <Social source={social} className="social-icons mb-8" />
           </div>
-          
         </div>
         {/* copyright */}
         <div className="border-t border-border py-6">
-          <p className="text-sm text-center">{blok?.copyright}</p>
+          {markdownify(copyright, "p", "text-sm text-center")}
         </div>
       </div>
     </footer>

@@ -7,14 +7,14 @@ import Link from "next/link";
 import { Autoplay, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
-import { getListPage } from "../lib/contentParser";
+import { getListPage } from "../../lib/contentParser";
 import {
   useStoryblokState,
   getStoryblokApi,
   StoryblokComponent,
 } from "@storyblok/react";
 
-const AboutUs = ({ frontmatter, story }) => {
+const Jobs = ({ frontmatter, story }) => {
   story = useStoryblokState(story);
   const { banner, feature, services, workflow, call_to_action } = frontmatter;
   const { title } = config.site;
@@ -27,7 +27,7 @@ const AboutUs = ({ frontmatter, story }) => {
 };
 
 export const getStaticProps = async () => {
-  let slug = "about-us";
+  let slug = "jobs";
 
   let sbParams = {
     version: "draft", // or 'published'
@@ -48,4 +48,4 @@ export const getStaticProps = async () => {
   };
 };
 
-export default AboutUs;
+export default Jobs;

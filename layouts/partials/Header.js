@@ -4,9 +4,8 @@ import menu from "@config/menu.json";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
-import { storyblokEditable } from "@storyblok/react";
 
-const Header = ({blok}) => {
+const Header = () => {
   //router
   const router = useRouter();
 
@@ -15,13 +14,17 @@ const Header = ({blok}) => {
 
   // states declaration
   const [navOpen, setNavOpen] = useState(false);
-  
+
+  // logo source
+  const { logo } = config.site;
+  const { enable, label, link } = config.nav_button;
+
   return (
-    <header className="header" {...storyblokEditable(blok)}>
+    <header className="header">
       <nav className="navbar container">
         {/* logo */}
         <div className="order-0">
-          <Logo src={blok?.logo.filename} />
+          <Logo src={logo} />
         </div>
 
         {/* navbar toggler */}
@@ -54,7 +57,7 @@ const Header = ({blok}) => {
           }`}
         >
           <ul className="navbar-nav block w-full md:flex md:w-auto lg:space-x-2">
-            {blok?.links.map((menu, i) => (
+            {main.map((menu, i) => (
               <React.Fragment key={`menu-${i}`}>
                 {menu.hasChildren ? (
                   <li className="nav-item nav-dropdown group relative">
@@ -80,20 +83,38 @@ const Header = ({blok}) => {
                 ) : (
                   <li className="nav-item">
                     <Link
-                      href={menu.link.url}
+                      href={menu.url}
                       onClick={() => setNavOpen(false)}
                       className={`nav-link block ${
                         router.asPath === menu.url ? "nav-link-active" : ""
                       }`}
                     >
-                      {menu.link.title}
+                      {menu.name}
                     </Link>
                   </li>
                 )}
               </React.Fragment>
             ))}
+            {enable && (
+              <li className="md:hidden">
+                <Link
+                  className="btn btn-primary z-0 py-[14px]"
+                  href={link}
+                  rel=""
+                >
+                  {label}
+                </Link>
+              </li>
+            )}
           </ul>
         </div>
+        {enable && (
+          <div className="d-flex order-1 ml-auto hidden min-w-[200px] items-center justify-end md:ml-0 md:flex md:order-2">
+            <Link className="btn btn-primary z-0 py-[14px]" href={link} rel="">
+              {label}
+            </Link>
+          </div>
+        )}
       </nav>
     </header>
   );

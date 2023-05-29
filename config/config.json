@@ -1,12 +1,12 @@
 {
   "site": {
-    "title": "Bigspring Light Nextjs",
+    "title": "Zegtec©",
     "base_url": "/",
     "favicon": "/images/favicon.png",
     "logo": "/images/logo.png",
     "logo_width": "200",
     "logo_height": "48",
-    "logo_text": "Bigspring Light"
+    "logo_text": "Zegtec©"
   },
 
   "settings": {
@@ -16,7 +16,7 @@
   },
 
   "nav_button": {
-    "enable": true,
+    "enable": false,
     "label": "Get Started",
     "link": "/contact"
   },
@@ -25,12 +25,12 @@
     "contact_form_action": "",
     "tag_manager_id": "",
     "footer_content": "Lorem ipsum dolor sit amet, consectetur elit. Consjat tristique eget amet, tempus eu at cttur.",
-    "copyright": "Designed and Developed By [Themefisher](https://themefisher.com/)"
+    "copyright": "Zegtec© Copyright 2023. All Rights Reserved."
   },
 
   "metadata": {
-    "meta_author": "Themefisher",
+    "meta_author": "Zegtec©",
     "meta_image": "",
-    "meta_description": "A SAAS template for nextjs"
+    "meta_description": "Development & Consulting Services"
   }
 }

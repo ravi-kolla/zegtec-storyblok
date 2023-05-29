@@ -15,14 +15,13 @@ import ServicesCarousel from "../layouts/components/ServicesCarousel";
 import AllArticles from '../layouts/components/AllArticles';
 import Article from '../layouts/components/Article';
 import Video from '../layouts/components/Video';
-import Header from '../layouts/partials/Header';
-import Footer from '../layouts/partials/Footer';
 import PopularArticles from '../layouts/components/PopularArticles';
 import StackedCard from '../layouts/components/StackedCard';
 import UserProfile from '../layouts/components/UserProfile';
 import UserImageProfile from '../layouts/components/UserImageProfile';
 import TextBlock from '../layouts/components/TextBlock';
 import Clients from '../layouts/components/Clients';
+import Image from '../layouts/components/Image';
 
 const components = {
   feature: Feature,
@@ -33,13 +32,12 @@ const components = {
   section: Section,
   servicesCarousel: ServicesCarousel,
   video: Video,
-  header: Header,
-  footer: Footer,
   stackedCard: StackedCard,
   userProfile: UserProfile,
   textBlock: TextBlock,
   userImageProfile: UserImageProfile,
   clients: Clients,
+  image: Image,
 };
 
 storyblokInit({

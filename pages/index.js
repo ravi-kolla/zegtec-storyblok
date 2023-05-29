@@ -16,6 +16,7 @@ import {
 
 const Home = ({ frontmatter, story }) => {
   story = useStoryblokState(story);
+  console.log(story.content);
   const { banner, feature, services, workflow, call_to_action } = frontmatter;
   const { title } = config.site;
 
