@@ -9,7 +9,6 @@ const JobPost = ({ post, jobSelected, showDetails }) => {
 
     return (
         <>  
-        <a href={`#${post.jobId}`}>
             <div className={`job-post bg-white shadow-xl shadow-gray-100 flex flex-col sm:flex-row gap-3 justify-between px-5 py-4 rounded-md mb-2 ${jobSelected? "job-selected" : ""}`} role="button" onClick={() => handleClick()}>
                 <div className="text-left">
                     <p className="ink text-sm">{post?.category}</p>
@@ -28,7 +27,6 @@ const JobPost = ({ post, jobSelected, showDetails }) => {
                 <div>
                 </div>
             </div>
-            </a>
         </>
         );
 };
