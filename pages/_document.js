@@ -27,6 +27,11 @@ const Document = () => {
           media="(prefers-color-scheme: dark)"
           content="#000"
         />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+          rel="stylesheet"
+        />
+        <script src="https://kit.fontawesome.com/3d2eda7c37.js" async crossorigin="anonymous"></script>
       </Head>
       <body>
         <Main />
