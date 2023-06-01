@@ -25,6 +25,7 @@ import Image from '../layouts/components/Image';
 import Jobs from '../layouts/components/Jobs';
 import JobPost from '../layouts/components/JobPost';
 import HeroCarousel from '../layouts/components/HeroCarousel';
+import ContactForm from '../layouts/components/ContactForm';
 
 const components = {
   feature: Feature,
@@ -44,6 +45,7 @@ const components = {
   jobs:Jobs,
   jobPost: JobPost,
   heroCarousel: HeroCarousel,
+  contactForm: ContactForm,
 };
 
 storyblokInit({
