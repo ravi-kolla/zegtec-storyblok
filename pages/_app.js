@@ -24,6 +24,7 @@ import Clients from '../layouts/components/Clients';
 import Image from '../layouts/components/Image';
 import Jobs from '../layouts/components/Jobs';
 import JobPost from '../layouts/components/JobPost';
+import HeroCarousel from '../layouts/components/HeroCarousel';
 
 const components = {
   feature: Feature,
@@ -41,7 +42,8 @@ const components = {
   clients: Clients,
   image: Image,
   jobs:Jobs,
-  jobPost:JobPost,
+  jobPost: JobPost,
+  heroCarousel: HeroCarousel,
 };
 
 storyblokInit({
