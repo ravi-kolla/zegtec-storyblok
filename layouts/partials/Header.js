@@ -20,7 +20,7 @@ const Header = () => {
   const { enable, label, link } = config.nav_button;
 
   return (
-    <header className="header">
+    <header className="header sticky top-0 lemon-bg z-50">
       <nav className="navbar container">
         {/* logo */}
         <div className="order-0">

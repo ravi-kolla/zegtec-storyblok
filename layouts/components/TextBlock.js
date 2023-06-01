@@ -4,7 +4,7 @@ import { render } from 'storyblok-rich-text-react-renderer';
 const TextBlock = ({ blok }) => {
     
     return (
-        <div {...storyblokEditable(blok)}>
+        <div className={blok.textAlignment} {...storyblokEditable(blok)}>
             {render(blok.content)}
         </div>
     );
