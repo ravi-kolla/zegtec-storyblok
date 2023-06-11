@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { getBlogPosts } from '../../lib/useStoryblok'
+import { getBlogPosts } from '@lib/useStoryblok'
 import Base from "@layouts/Baseof";
 import config from "@config/config.json";
 
