@@ -3,7 +3,6 @@ import { useRouter } from 'next/router'
 import { getBlogPostBySlug } from '../../lib/useStoryblok'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
-import sanitizeHtml from 'sanitize-html';
 import { renderRichText, getStoryblokApi } from "@storyblok/react";
 import Base from "@layouts/Baseof";
 import config from "@config/config.json";
@@ -14,7 +13,7 @@ export default function BlogPost() {
   const router = useRouter()
   const { slug } = router.query
   const storyblokApi = getStoryblokApi();
-  let renderedRichText;
+
   useEffect(() => {
     async function fetchBlogPost() {
         const { data } = await storyblokApi.get(`cdn/stories/blog-posts/${slug}`, {
@@ -27,8 +26,6 @@ export default function BlogPost() {
     if (slug) {
       fetchBlogPost()
       console.log(blogPost);
-      renderedRichText = blogPost && renderRichText(blogPost.content.content);
-
     }
   }, [slug])
 
@@ -50,7 +47,6 @@ export default function BlogPost() {
         <ReactMarkdown remarkPlugins={[remarkGfm]}>
         {blogPost.content.content}
         </ReactMarkdown>
-        <div>{renderedRichText}</div>
     </div>
     </section>
     </Base>

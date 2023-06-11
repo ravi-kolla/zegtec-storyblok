@@ -26,8 +26,10 @@
     "react-gtm-module": "^2.0.11",
     "react-icons": "^4.7.1",
     "react-lite-youtube-embed": "^2.3.52",
+    "react-markdown": "^8.0.7",
     "rehype-slug": "^5.1.0",
     "remark-gfm": "^3.0.1",
+    "storyblok-js-client": "^5.10.6",
     "storyblok-rich-text-react-renderer": "^2.8.0",
     "swiper": "^8.4.5"
   },
